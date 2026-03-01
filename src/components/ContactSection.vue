@@ -1,16 +1,11 @@
 <template>
-    <!-- ═══════════════════════════════════════════════════════
-       CONTACT SECTION — "Request A Nightly Patrol"
-       Left: info + guarantee | Right: contact form
-       ═══════════════════════════════════════════════════════ -->
+
     <section id="contact" class="contact-section py-16 lg:py-24">
         <div class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-10">
 
             <div class="contact-grid">
 
-                <!-- ═══════════════════════════════════════════
-             LEFT: heading, contact rows, guarantee box
-             ═══════════════════════════════════════════ -->
+
                 <div class="contact-left">
 
                     <h2 class="contact-heading">Request A Nightly Patrol</h2>

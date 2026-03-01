@@ -11,12 +11,9 @@
       <AboutSection />
       <Gallery />
       <WhyChooseUsSection />
-      <!-- <ServicesSection /> -->
       <GlobalCoverageSection />
       <Seewhopepople />
       <fact />
-      <!-- <ProductsSection /> -->
-      <!-- <CTABannerSection /> -->
       <PricingSection />
       <security />
       <HiringCTASection />
@@ -37,12 +34,9 @@ import features from '@/components/features.vue'
 import AboutSection from '@/components/AboutSection.vue'
 import Gallery from '@/components/Gallery.vue'
 import WhyChooseUsSection from '@/components/WhyChooseUsSection.vue'
-// import ServicesSection from '@/components/ServicesSection.vue'
 import GlobalCoverageSection from '@/components/GlobalCoverageSection.vue'
 import Seewhopepople from '@/components/Seewhopepople.vue'
 import fact from '@/components/fact.vue'
-// import ProductsSection from '@/components/ProductsSection.vue'
-// import CTABannerSection from '@/components/CTABannerSection.vue'
 import PricingSection from '@/components/PricingSection.vue'
 import security from '@/components/security.vue'
 import HiringCTASection from '@/components/HiringCTASection.vue'
