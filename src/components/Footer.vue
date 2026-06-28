@@ -136,7 +136,7 @@ const socials = [
 /* ── Footer bg ── */
 .footer {
     background: #0a1428;
-    padding-top: 56px;
+    padding-top: 80px;
     padding-bottom: 0;
 }
 
@@ -144,14 +144,14 @@ const socials = [
 .footer-top {
     display: grid;
     grid-template-columns: 1.6fr 1fr 1fr 1fr;
-    gap: 48px;
-    padding-bottom: 48px;
+    gap: 60px;
+    padding-bottom: 60px;
 }
 
 @media (max-width: 900px) {
     .footer-top {
         grid-template-columns: 1fr 1fr;
-        gap: 32px;
+        gap: 40px;
     }
 }
 
@@ -165,36 +165,36 @@ const socials = [
 .footer-brand {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 20px;
 }
 
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 18px;
+    gap: 12px;
+    font-size: 22px;
     font-weight: 800;
     color: #ffffff;
     letter-spacing: 0.04em;
 }
 
 .footer-desc {
-    font-size: 13px;
+    font-size: 15px;
     color: rgba(255, 255, 255, 0.45);
-    line-height: 1.7;
-    max-width: 280px;
+    line-height: 1.8;
+    max-width: 320px;
 }
 
 /* Social icons */
 .social-row {
     display: flex;
-    gap: 10px;
-    margin-top: 4px;
+    gap: 12px;
+    margin-top: 8px;
 }
 
 .social-icon {
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: #1C56DB;
     display: flex;
@@ -213,24 +213,24 @@ const socials = [
 .footer-col {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 18px;
 }
 
 .footer-col-title {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .footer-links {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
 }
 
 .footer-link {
-    font-size: 13px;
+    font-size: 15px;
     color: rgba(255, 255, 255, 0.45);
     text-decoration: none;
     transition: color 0.2s;
@@ -251,30 +251,30 @@ const socials = [
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 18px 0 20px;
+    padding: 24px 0 28px;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 16px;
 }
 
 .footer-copy {
-    font-size: 12.5px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.45);
 }
 
 .footer-license {
-    font-size: 12px;
+    font-size: 13px;
     color: rgba(255, 255, 255, 0.3);
-    margin-top: 2px;
+    margin-top: 4px;
 }
 
 .footer-hotline {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     color: #ffffff;
 }
 
 .hotline-label {
     color: #4d90fe;
-    margin-right: 4px;
+    margin-right: 6px;
 }
 </style>

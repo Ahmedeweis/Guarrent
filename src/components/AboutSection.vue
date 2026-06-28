@@ -5,25 +5,20 @@
        ═══════════════════════════════════════════════════════ -->
     <section id="about" class="about-section py-20 lg:py-28 bg-white overflow-hidden">
         <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-10">
-
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-
                 <!-- ══════════════════════════════════════════
              LEFT: Text Content
              ══════════════════════════════════════════ -->
                 <div class="flex flex-col">
-
                     <!-- "WHO WE ARE" pill badge -->
                     <div class="mb-5">
                         <span class="who-badge">WHO WE ARE</span>
                     </div>
-
                     <!-- Main headline -->
                     <h2 class="about-heading mb-5">
                         Security That Acts Before<br class="hidden sm:block" />
                         It's Too Late
                     </h2>
-
                     <!-- Description paragraph -->
                     <p class="about-desc mb-10">
                         Guarrent security is a licensed sydney-based security
@@ -32,10 +27,8 @@
                         parking lots and construction sites keeping thieves, vandals
                         and intruders away.
                     </p>
-
                     <!-- Feature icon pills row -->
-                    <div class="flex flex-wrap gap-6 sm:gap-10">
-
+                    <div class="flex flex-wrap justify-between gap-6 sm:gap-10">
                         <!-- 1. Licensed & Insured -->
                         <div class="feature-pill">
                             <div class="feature-icon-wrap">
@@ -48,7 +41,6 @@
                             </div>
                             <span class="feature-label">Licensed &amp; Insured</span>
                         </div>
-
                         <!-- 2. Night Specialists -->
                         <div class="feature-pill">
                             <div class="feature-icon-wrap">
@@ -60,7 +52,6 @@
                             </div>
                             <span class="feature-label">Night Specialists</span>
                         </div>
-
                         <!-- 3. Sydney Wide -->
                         <div class="feature-pill">
                             <div class="feature-icon-wrap">
@@ -74,17 +65,13 @@
                             </div>
                             <span class="feature-label">Sydney Wide</span>
                         </div>
-
                     </div>
-
                 </div>
-
                 <!-- ══════════════════════════════════════════
              RIGHT: Guard Photo
              ══════════════════════════════════════════ -->
                 <div class="flex justify-center lg:justify-end">
                     <div class="guard-photo-wrap relative">
-
                         <!-- "Since 2016" ribbon banner — top-left -->
                         <div class="since-ribbon">
                             <span class="since-line1">Since</span>
@@ -92,37 +79,30 @@
                             <!-- Triangle tip of ribbon -->
                             <div class="ribbon-tip"></div>
                         </div>
-
                         <!-- Guard photo -->
                         <img src="@/assets/imgs/about_guard.png" alt="Guarrent Security Officer" class="guard-photo"
                             loading="lazy" @error="guardError = true" />
-
                         <!-- CSS fallback if image fails -->
                         <div v-if="guardError" class="guard-fallback">
                             <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
                             </svg>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 </template>
-
 <script setup>
 import { ref } from 'vue'
 const guardError = ref(false)
 </script>
-
 <style scoped>
 /* ── Section ── */
 .about-section {
     background: #ffffff;
 }
-
 /* ── "WHO WE ARE" badge ── */
 .who-badge {
     display: inline-block;
@@ -134,24 +114,23 @@ const guardError = ref(false)
     padding: 5px 14px;
     border-radius: 999px;
 }
-
 /* ── Heading ── */
 .about-heading {
     font-size: clamp(28px, 4vw, 42px);
-    font-weight: 800;
+    /* font-weight: 800; */
+    font-weight: 600;
     color: #0f1f48;
     line-height: 1.15;
     letter-spacing: -0.01em;
 }
-
 /* ── Description ── */
 .about-desc {
     font-size: 15px;
     line-height: 1.75;
-    color: #6b7280;
+    color: #3f759e;
     max-width: 480px;
+    font-weight: bold;
 }
-
 /* ── Feature pill (icon + label stacked) ── */
 .feature-pill {
     display: flex;
@@ -159,7 +138,6 @@ const guardError = ref(false)
     align-items: center;
     gap: 10px;
 }
-
 .feature-icon-wrap {
     width: 52px;
     height: 52px;
@@ -171,7 +149,6 @@ const guardError = ref(false)
     flex-shrink: 0;
     box-shadow: 0 6px 20px rgba(28, 86, 219, 0.35);
 }
-
 .feature-label {
     font-size: 13px;
     font-weight: 600;
@@ -179,7 +156,6 @@ const guardError = ref(false)
     text-align: center;
     white-space: nowrap;
 }
-
 /* ── Right photo card ── */
 .guard-photo-wrap {
     position: relative;
@@ -190,7 +166,6 @@ const guardError = ref(false)
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
     background: #e2e8f0;
 }
-
 .guard-photo {
     width: 100%;
     height: 100%;
@@ -198,7 +173,6 @@ const guardError = ref(false)
     object-position: top center;
     display: block;
 }
-
 .guard-fallback {
     width: 100%;
     height: 100%;
@@ -207,7 +181,6 @@ const guardError = ref(false)
     justify-content: center;
     background: linear-gradient(135deg, #dbe8f8, #c8d9ed);
 }
-
 /* ── "Since 2016" ribbon ── */
 .since-ribbon {
     position: absolute;
@@ -215,16 +188,15 @@ const guardError = ref(false)
     left: 28px;
     z-index: 20;
     background: #1C56DB;
-    width: 52px;
+    width: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 6px 8px;
+    padding: 24px 6px 22px;
     /* No border-radius on top — sticks to top edge */
     border-radius: 0 0 0 0;
     gap: 0;
 }
-
 .since-line1 {
     font-size: 10px;
     font-weight: 500;
@@ -233,23 +205,21 @@ const guardError = ref(false)
     line-height: 1;
     margin-bottom: 1px;
 }
-
 .since-year {
     font-size: 18px;
     font-weight: 800;
     color: #ffffff;
     line-height: 1.1;
 }
-
 /* Downward triangle tip of the ribbon */
 .ribbon-tip {
     position: absolute;
-    bottom: -12px;
+    bottom: -18px;
     left: 0;
     width: 0;
     height: 0;
-    border-left: 26px solid #1C56DB;
-    border-right: 26px solid #1C56DB;
-    border-bottom: 12px solid transparent;
+    border-left: 30px solid #1C56DB;
+    border-right: 30px solid #1C56DB;
+    border-bottom: 18px solid transparent;
 }
 </style>

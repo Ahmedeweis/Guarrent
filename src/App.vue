@@ -22,4 +22,8 @@ const isLoading = ref(false)
 
 <style>
 @import url(assets/css/normalize.css);
+
+button {
+  cursor: pointer;
+}
 </style>

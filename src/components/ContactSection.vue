@@ -1,22 +1,15 @@
 <template>
-
     <section id="contact" class="contact-section py-16 lg:py-24">
         <div class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-10">
-
             <div class="contact-grid">
-
-
                 <div class="contact-left">
-
                     <h2 class="contact-heading">Request A Nightly Patrol</h2>
                     <p class="contact-subheading">
                         fill out the form and our team will get back to you within
                         24 hours to discuss your security needs.
                     </p>
-
                     <!-- Contact info rows -->
                     <div class="contact-info-list">
-
                         <div class="contact-info-row">
                             <div class="contact-icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24"
@@ -32,7 +25,6 @@
                                 <p class="info-muted">Available 24/7</p>
                             </div>
                         </div>
-
                         <div class="contact-info-row">
                             <div class="contact-icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24"
@@ -48,7 +40,6 @@
                                 <p class="info-value">patrol@guarrentsecurity.com.au</p>
                             </div>
                         </div>
-
                         <div class="contact-info-row">
                             <div class="contact-icon-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24"
@@ -63,9 +54,7 @@
                                 <p class="info-value">All Sydney Suburbs</p>
                             </div>
                         </div>
-
                     </div>
-
                     <!-- Quick Response Guarantee box -->
                     <div class="guarantee-box">
                         <p class="guarantee-title">Quick Response Guarantee</p>
@@ -74,38 +63,31 @@
                             up for your property within 48 hours of confirmation.
                         </p>
                     </div>
-
                     <!-- Owner attribution -->
                     <p class="owner-attr">owner – <span class="owner-name">hamida jannat</span></p>
-
                 </div>
-
                 <!-- ═══════════════════════════════════════════
              RIGHT: Contact form
              ═══════════════════════════════════════════ -->
                 <div class="contact-form-panel">
                     <form @submit.prevent="submitForm" class="contact-form" novalidate>
-
                         <!-- Name -->
                         <div class="field-group">
                             <label class="field-label">Name*</label>
                             <input v-model="form.name" type="text" class="field-input" placeholder="your full name"
                                 required />
                         </div>
-
                         <!-- Business/Property Name -->
                         <div class="field-group">
                             <label class="field-label">Business/Property Name*</label>
                             <input v-model="form.business" type="text" class="field-input" placeholder="optional" />
                         </div>
-
                         <!-- Suburb -->
                         <div class="field-group">
                             <label class="field-label">Suburb*</label>
                             <input v-model="form.suburb" type="text" class="field-input" placeholder="e.g parramanta"
                                 required />
                         </div>
-
                         <!-- Phone + Email side by side -->
                         <div class="field-row">
                             <div class="field-group">
@@ -119,14 +101,12 @@
                                     placeholder="info@email.com" required />
                             </div>
                         </div>
-
                         <!-- Message -->
                         <div class="field-group">
                             <label class="field-label">Message*</label>
                             <textarea v-model="form.message" class="field-input field-textarea"
                                 placeholder="tell us about your security needs...." required rows="4"></textarea>
                         </div>
-
                         <!-- Submit -->
                         <button type="submit" class="submit-btn">
                             Submit Request
@@ -135,18 +115,14 @@
                                 <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
                         </button>
-
                     </form>
                 </div>
-
             </div>
         </div>
     </section>
 </template>
-
 <script setup>
 import { reactive } from 'vue'
-
 const form = reactive({
     name: '',
     business: '',
@@ -155,19 +131,16 @@ const form = reactive({
     email: '',
     message: '',
 })
-
 function submitForm() {
     // Form submission logic here
     console.log('Form submitted:', { ...form })
 }
 </script>
-
 <style scoped>
 /* ── Section: deep navy ── */
 .contact-section {
-    background: #0a1428;
+    background: #0C1A31;
 }
-
 /* ── 2-column grid ── */
 .contact-grid {
     display: grid;
@@ -175,20 +148,17 @@ function submitForm() {
     gap: 60px;
     align-items: start;
 }
-
 @media (max-width: 900px) {
     .contact-grid {
         grid-template-columns: 1fr;
     }
 }
-
 /* ─── LEFT COLUMN ─── */
 .contact-left {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
-
 .contact-heading {
     font-size: clamp(22px, 2.8vw, 32px);
     font-weight: 700;
@@ -196,27 +166,23 @@ function submitForm() {
     line-height: 1.2;
     letter-spacing: -0.01em;
 }
-
 .contact-subheading {
     font-size: 13.5px;
     color: rgba(255, 255, 255, 0.5);
     line-height: 1.7;
     max-width: 400px;
 }
-
 /* Contact info rows */
 .contact-info-list {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
-
 .contact-info-row {
     display: flex;
     align-items: flex-start;
     gap: 14px;
 }
-
 .contact-icon-circle {
     width: 42px;
     height: 42px;
@@ -228,25 +194,21 @@ function submitForm() {
     flex-shrink: 0;
     box-shadow: 0 4px 14px rgba(28, 86, 219, 0.4);
 }
-
 .info-label {
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 2px;
 }
-
 .info-value {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.65);
 }
-
 .info-muted {
     font-size: 11.5px;
     color: rgba(255, 255, 255, 0.35);
     margin-top: 1px;
 }
-
 /* Guarantee box */
 .guarantee-box {
     border: 1.5px solid rgba(28, 86, 219, 0.5);
@@ -254,97 +216,82 @@ function submitForm() {
     border-radius: 14px;
     padding: 16px 18px;
 }
-
 .guarantee-title {
     font-size: 14px;
     font-weight: 600;
     color: #4d90fe;
     margin-bottom: 6px;
 }
-
 .guarantee-desc {
     font-size: 12.5px;
     color: rgba(255, 255, 255, 0.45);
     line-height: 1.7;
 }
-
 /* Owner */
 .owner-attr {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.3);
 }
-
 .owner-name {
     color: #4d90fe;
 }
-
 /* ─── RIGHT COLUMN: FORM PANEL ─── */
 .contact-form-panel {
     background: #0d1b3e;
     border-radius: 20px;
     padding: 32px 28px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid #ffffff;
 }
-
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-
 /* Field group */
 .field-group {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
-
 .field-label {
     font-size: 12.5px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.75);
+    color: #ffffff;
     letter-spacing: 0.01em;
 }
-
 .field-input {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 11px 14px;
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #1a1a1a;
     outline: none;
     transition: border-color 0.2s, background 0.2s;
     width: 100%;
 }
-
 .field-input::placeholder {
-    color: rgba(255, 255, 255, 0.25);
+    color: #999999;
 }
-
 .field-input:focus {
-    border-color: rgba(28, 86, 219, 0.7);
-    background: rgba(28, 86, 219, 0.06);
+    border-color: #1C56DB;
+    background: #f0f7ff;
 }
-
 .field-textarea {
     resize: vertical;
     min-height: 100px;
 }
-
 /* Phone + Email side by side */
 .field-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
 }
-
 @media (max-width: 480px) {
     .field-row {
         grid-template-columns: 1fr;
     }
 }
-
 /* Submit button */
 .submit-btn {
     display: flex;
@@ -361,16 +308,12 @@ function submitForm() {
     cursor: pointer;
     width: 100%;
     margin-top: 4px;
-    box-shadow: 0 6px 24px rgba(28, 86, 219, 0.45);
-    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    transition: background 0.2s, transform 0.2s;
 }
-
 .submit-btn:hover {
     background: #1548c0;
     transform: translateY(-2px);
-    box-shadow: 0 10px 32px rgba(28, 86, 219, 0.6);
 }
-
 .submit-btn:active {
     transform: translateY(0);
 }

@@ -5,7 +5,6 @@
        ═══════════════════════════════════════════════════════ -->
     <section class="why-section py-16 lg:py-24">
         <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-10">
-
             <!-- ── Centered heading ── -->
             <div class="text-center mb-12">
                 <h2 class="why-heading">
@@ -13,32 +12,24 @@
                     Guarrent Security
                 </h2>
             </div>
-
             <!-- ── 4 white cards ── -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div v-for="card in cards" :key="card.title" class="why-card">
                     <!-- Blue circle icon -->
                     <div class="why-icon-circle">
                         <component :is="card.icon" class="w-5 h-5 text-white" />
                     </div>
-
                     <!-- Title -->
                     <h3 class="why-card-title">{{ card.title }}</h3>
-
                     <!-- Description -->
                     <p class="why-card-desc">{{ card.desc }}</p>
                 </div>
-
             </div>
-
         </div>
     </section>
 </template>
-
 <script setup>
 import { defineComponent, h } from 'vue'
-
 // Tiny inline SVG icon factory
 const svg = (paths) => defineComponent({
     render: () => h('svg', {
@@ -51,7 +42,6 @@ const svg = (paths) => defineComponent({
         'stroke-linejoin': 'round',
     }, paths.map(d => h('path', { d })))
 })
-
 // People / guards icon
 const PeopleIcon = defineComponent({
     render: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', fill: 'none', viewBox: '0 0 24 24', stroke: 'currentColor', 'stroke-width': '1.8', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
@@ -61,7 +51,6 @@ const PeopleIcon = defineComponent({
         h('path', { d: 'M16 3.13a4 4 0 0 1 0 7.75' }),
     ])
 })
-
 // GPS / target crosshair icon
 const GpsIcon = defineComponent({
     render: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', fill: 'none', viewBox: '0 0 24 24', stroke: 'currentColor', 'stroke-width': '1.8', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
@@ -73,7 +62,6 @@ const GpsIcon = defineComponent({
         h('line', { x1: '18', y1: '12', x2: '22', y2: '12' }),
     ])
 })
-
 // Clock icon
 const ClockIcon = defineComponent({
     render: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', fill: 'none', viewBox: '0 0 24 24', stroke: 'currentColor', 'stroke-width': '1.8', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
@@ -81,7 +69,6 @@ const ClockIcon = defineComponent({
         h('polyline', { points: '12 6 12 12 16 14' }),
     ])
 })
-
 // Clipboard / report icon
 const ReportIcon = defineComponent({
     render: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', fill: 'none', viewBox: '0 0 24 24', stroke: 'currentColor', 'stroke-width': '1.8', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
@@ -92,7 +79,6 @@ const ReportIcon = defineComponent({
         h('path', { d: 'M8 18h4' }),
     ])
 })
-
 const cards = [
     {
         icon: PeopleIcon,
@@ -116,13 +102,11 @@ const cards = [
     },
 ]
 </script>
-
 <style scoped>
 /* ── Section: light blue gradient bg ── */
 .why-section {
     background: linear-gradient(160deg, #dce7f3 0%, #e6eff8 50%, #edf4fb 100%);
 }
-
 /* ── Heading ── */
 .why-heading {
     font-size: clamp(26px, 3.5vw, 38px);
@@ -131,24 +115,22 @@ const cards = [
     line-height: 1.25;
     letter-spacing: -0.01em;
 }
-
 /* ── Card ── */
 .why-card {
     background: #ffffff;
     border-radius: 16px;
-    padding: 28px 24px 28px;
+    padding: 28px 20px 28px;
     display: flex;
     flex-direction: column;
     gap: 14px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.25s ease, transform 0.25s ease;
+    height: 100%;
 }
-
 .why-card:hover {
     box-shadow: 0 8px 32px rgba(28, 86, 219, 0.12);
     transform: translateY(-3px);
 }
-
 /* ── Blue circle icon ── */
 .why-icon-circle {
     width: 48px;
@@ -161,19 +143,18 @@ const cards = [
     flex-shrink: 0;
     box-shadow: 0 4px 14px rgba(28, 86, 219, 0.35);
 }
-
 /* ── Card title ── */
 .why-card-title {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     color: #0f1f48;
     line-height: 1.35;
 }
-
 /* ── Card description ── */
 .why-card-desc {
-    font-size: 13px;
+    font-size: 15px;
     color: #6b7280;
     line-height: 1.65;
+    margin-top: auto;
 }
 </style>

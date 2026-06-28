@@ -1,5 +1,5 @@
 <template>
-    <section id="faq" :dir="locale === 'ar' ? 'rtl' : 'ltr'" class="py-20 lg:py-28 bg-white">
+    <section id="faq" :dir="locale === 'ar' ? 'rtl' : 'ltr'" class="py-20 lg:py-28" style="background: #BCD6ED;">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-14">
@@ -11,16 +11,16 @@
             <!-- Accordion Items -->
             <div class="flex flex-col gap-3">
                 <div v-for="(item, idx) in items" :key="idx"
-                    class="border border-gray-100 rounded-2xl overflow-hidden hover:border-blue-100 transition-colors duration-200"
+                    class="border border-white rounded-2xl overflow-hidden hover:border-blue-100 transition-colors duration-200 bg-white"
                     :class="openIdx === idx ? 'border-blue-200 shadow-sm' : ''">
                     <!-- Question -->
                     <button @click="toggle(idx)"
-                        class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-blue-50/50 transition-colors duration-200"
-                        :class="locale === 'ar' ? 'flex-row-reverse text-right' : ''">
-                        <span class="font-semibold text-gray-900 text-base leading-snug">{{ t(item.q) }}</span>
+                        class="faq-button w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-blue-50/50 transition-colors duration-200"
+                        :class="[locale === 'ar' ? 'flex-row-reverse text-right' : '', openIdx === idx ? 'active' : '']">
+                        <span class="question-text font-semibold text-gray-900 text-base leading-snug">{{ t(item.q) }}</span>
                         <span
                             class="flex-shrink-0 w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-300"
-                            :class="openIdx === idx ? 'bg-blue-600 text-white rotate-45' : 'bg-gray-100 text-gray-500'">
+                            :class="openIdx === idx ? 'bg-white text-blue-600 rotate-45' : 'bg-gray-100 text-gray-500'">
                             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                     d="M12 4v16m8-8H4" />
@@ -31,7 +31,7 @@
                     <!-- Answer -->
                     <div class="overflow-hidden transition-all duration-300 ease-in-out"
                         :style="openIdx === idx ? `max-height: ${answerHeights[idx] || 500}px` : 'max-height: 0px'">
-                        <div :ref="el => setRef(el, idx)" class="px-6 pb-6 pt-0">
+                        <div :ref="el => setRef(el, idx)" class="answer-container px-6 pb-6 pt-4">
                             <p class="text-gray-500 text-sm leading-relaxed"
                                 :class="locale === 'ar' ? 'text-right' : ''">
                                 {{ t(item.a) }}
@@ -76,3 +76,18 @@ onMounted(() => {
     })
 })
 </script>
+
+<style scoped>
+.faq-button {
+    background: #ECF4FA;
+}
+.faq-button.active {
+    background: #1C80F0;
+}
+.faq-button.active .question-text {
+    color: #ffffff;
+}
+.answer-container {
+    background: white;
+}
+</style>
