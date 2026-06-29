@@ -21,7 +21,7 @@
                             </div>
                             <div>
                                 <p class="info-label">Phone</p>
-                                <p class="info-value">1800-SECURE</p>
+                                <p class="info-value">+201093057107 SECURE</p>
                                 <p class="info-muted">Available 24/7</p>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                             </div>
                             <div>
                                 <p class="info-label">Email</p>
-                                <p class="info-value">patrol@guarrentsecurity.com.au</p>
+                                <p class="info-value">ahmed.eweiis@gmail.com</p>
                             </div>
                         </div>
                         <div class="contact-info-row">

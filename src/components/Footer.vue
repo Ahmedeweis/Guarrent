@@ -6,13 +6,10 @@
        ═══════════════════════════════════════════════════════ -->
     <footer class="footer">
         <div class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-10">
-
             <!-- ── Top 4-column grid ── -->
             <div class="footer-top">
-
                 <!-- Col 1: Brand -->
                 <div class="footer-brand">
-
                     <!-- Logo -->
                     <div class="footer-logo">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24"
@@ -21,23 +18,19 @@
                         </svg>
                         <span>GUARRENT</span>
                     </div>
-
                     <!-- Brand description -->
                     <p class="footer-desc">
                         Sydney's most trusted nightly patrol security
                         service, protecting homes and businesses
                         across sydney since 2016.
                     </p>
-
                     <!-- Social icons -->
                     <div class="social-row">
                         <a v-for="s in socials" :key="s.label" :href="s.href" :aria-label="s.label" class="social-icon">
                             <component :is="s.icon" class="w-4 h-4 text-white" />
                         </a>
                     </div>
-
                 </div>
-
                 <!-- Col 2: About -->
                 <div class="footer-col">
                     <h4 class="footer-col-title">About</h4>
@@ -48,7 +41,6 @@
                         <a href="#testimonials" class="footer-link">Testimonials</a>
                     </nav>
                 </div>
-
                 <!-- Col 3: Services -->
                 <div class="footer-col">
                     <h4 class="footer-col-title">Services</h4>
@@ -59,7 +51,6 @@
                         <a href="#services" class="footer-link">Emergency Dispatch</a>
                     </nav>
                 </div>
-
                 <!-- Col 4: Contact -->
                 <div class="footer-col">
                     <h4 class="footer-col-title">Contact</h4>
@@ -70,12 +61,9 @@
                         <a href="#terms" class="footer-link">Terms And Conditions</a>
                     </nav>
                 </div>
-
             </div>
-
             <!-- ── Divider ── -->
             <div class="footer-divider"></div>
-
             <!-- ── Bottom bar ── -->
             <div class="footer-bottom">
                 <div>
@@ -87,14 +75,11 @@
                     1800-SECURE (24/7)
                 </p>
             </div>
-
         </div>
     </footer>
 </template>
-
 <script setup>
 import { defineComponent, h } from 'vue'
-
 // Tiny SVG icon factory
 const icon = (paths) => defineComponent({
     render: () => h('svg', {
@@ -103,27 +88,22 @@ const icon = (paths) => defineComponent({
         viewBox: '0 0 24 24',
     }, paths)
 })
-
 // Facebook
 const FacebookIcon = icon([h('path', { d: 'M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z' })])
-
 // Twitter / X
 const TwitterIcon = icon([h('path', { d: 'M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z' })])
-
 // Instagram
 const InstagramIcon = icon([
     h('rect', { x: '2', y: '2', width: '20', height: '20', rx: '5', ry: '5' }),
     h('path', { d: 'M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z' }),
     h('line', { x1: '17.5', y1: '6.5', x2: '17.51', y2: '6.5' }),
 ])
-
 // LinkedIn
 const LinkedInIcon = icon([
     h('path', { d: 'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z' }),
     h('rect', { x: '2', y: '9', width: '4', height: '12' }),
     h('circle', { cx: '4', cy: '4', r: '2' }),
 ])
-
 const socials = [
     { label: 'Facebook', href: '#', icon: FacebookIcon },
     { label: 'Twitter', href: '#', icon: TwitterIcon },
@@ -131,7 +111,6 @@ const socials = [
     { label: 'LinkedIn', href: '#', icon: LinkedInIcon },
 ]
 </script>
-
 <style scoped>
 /* ── Footer bg ── */
 .footer {
@@ -139,7 +118,6 @@ const socials = [
     padding-top: 80px;
     padding-bottom: 0;
 }
-
 /* ── Top 4-col grid ── */
 .footer-top {
     display: grid;
@@ -147,28 +125,24 @@ const socials = [
     gap: 60px;
     padding-bottom: 60px;
 }
-
 @media (max-width: 900px) {
     .footer-top {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
     }
 }
-
 @media (max-width: 560px) {
     .footer-top {
         grid-template-columns: 1fr;
         padding-bottom: 0;
     }
 }
-
 /* ── Brand col ── */
 .footer-brand {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
 .footer-logo {
     display: flex;
     align-items: center;
@@ -178,21 +152,18 @@ const socials = [
     color: #ffffff;
     letter-spacing: 0.04em;
 }
-
 .footer-desc {
     font-size: 15px;
     color: rgba(255, 255, 255, 0.45);
     line-height: 1.8;
     max-width: 320px;
 }
-
 /* Social icons */
 .social-row {
     display: flex;
     gap: 12px;
     margin-top: 8px;
 }
-
 .social-icon {
     width: 44px;
     height: 44px;
@@ -204,49 +175,41 @@ const socials = [
     transition: background 0.2s, transform 0.2s;
     text-decoration: none;
 }
-
 .social-icon:hover {
     background: #1548c0;
     transform: translateY(-2px);
 }
-
 /* ── Nav columns ── */
 .footer-col {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
-
 .footer-col-title {
     font-size: 18px;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 4px;
 }
-
 .footer-links {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-
 .footer-link {
     font-size: 15px;
     color: rgba(255, 255, 255, 0.45);
     text-decoration: none;
     transition: color 0.2s;
 }
-
 .footer-link:hover {
     color: rgba(255, 255, 255, 0.85);
 }
-
 /* ── Divider ── */
 .footer-divider {
     height: 1px;
     background: rgba(255, 255, 255, 0.08);
 }
-
 /* ── Bottom bar ── */
 .footer-bottom {
     display: flex;
@@ -257,24 +220,20 @@ const socials = [
     flex-wrap: wrap;
     gap: 16px;
 }
-
 .footer-copy {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.45);
 }
-
 .footer-license {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.3);
     margin-top: 4px;
 }
-
 .footer-hotline {
     font-size: 15px;
     font-weight: 600;
     color: #ffffff;
 }
-
 .hotline-label {
     color: #4d90fe;
     margin-right: 6px;
