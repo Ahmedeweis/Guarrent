@@ -70,41 +70,45 @@
              RIGHT: Contact form
              ═══════════════════════════════════════════ -->
                 <div class="contact-form-panel" style="order: 0;">
-                    <form @submit.prevent="submitForm" class="contact-form" novalidate>
+                    <form action="https://formsubmit.co/ahmed.eweiis@gmail.com" method="POST" class="contact-form" novalidate>
+                        <!-- Hidden Inputs for FormSubmit -->
+                        <input type="hidden" name="_subject" value="New Patrol Request from Guarrent Website">
+                        <input type="hidden" name="_next" value="">
+                        <input type="hidden" name="_captcha" value="false">
                         <!-- Name -->
                         <div class="field-group">
                             <label class="field-label">Name*</label>
-                            <input v-model="form.name" type="text" class="field-input" placeholder="your full name"
+                            <input type="text" name="name" class="field-input" placeholder="your full name"
                                 required />
                         </div>
                         <!-- Business/Property Name -->
                         <div class="field-group">
-                            <label class="field-label">Business/Property Name*</label>
-                            <input v-model="form.business" type="text" class="field-input" placeholder="optional" />
+                            <label class="field-label">Business/Property Name</label>
+                            <input type="text" name="business" class="field-input" placeholder="optional" />
                         </div>
                         <!-- Suburb -->
                         <div class="field-group">
                             <label class="field-label">Suburb*</label>
-                            <input v-model="form.suburb" type="text" class="field-input" placeholder="e.g parramanta"
+                            <input type="text" name="suburb" class="field-input" placeholder="e.g parramatta"
                                 required />
                         </div>
                         <!-- Phone + Email side by side -->
                         <div class="field-row">
                             <div class="field-group">
                                 <label class="field-label">Phone*</label>
-                                <input v-model="form.phone" type="tel" class="field-input" placeholder="0400 800 7000"
+                                <input type="tel" name="phone" class="field-input" placeholder="0400 800 7000"
                                     required />
                             </div>
                             <div class="field-group">
                                 <label class="field-label">Email*</label>
-                                <input v-model="form.email" type="email" class="field-input"
+                                <input type="email" name="email" class="field-input"
                                     placeholder="info@email.com" required />
                             </div>
                         </div>
                         <!-- Message -->
                         <div class="field-group">
                             <label class="field-label">Message*</label>
-                            <textarea v-model="form.message" class="field-input field-textarea"
+                            <textarea name="message" class="field-input field-textarea"
                                 placeholder="tell us about your security needs...." required rows="4"></textarea>
                         </div>
                         <!-- Submit -->
@@ -122,19 +126,6 @@
     </section>
 </template>
 <script setup>
-import { reactive } from 'vue'
-const form = reactive({
-    name: '',
-    business: '',
-    suburb: '',
-    phone: '',
-    email: '',
-    message: '',
-})
-function submitForm() {
-    // Form submission logic here
-    console.log('Form submitted:', { ...form })
-}
 </script>
 <style scoped>
 /* ── Section: deep navy ── */
