@@ -244,16 +244,9 @@ const zones = computed(() => suburbAngles.map(({ name, angle }) => {
 
 /* ── Responsive: scale the radar on small screens ── */
 @media (max-width: 600px) {
-    .radar-circle {
-        width: 340px;
-        height: 340px;
-    }
-
-    /* Recalculate pill positions at smaller size via CSS scale */
     .radar-wrap {
         transform: scale(0.68);
-        transform-origin: center top;
-        margin-bottom: -80px;
+        transform-origin: center center;
     }
 }
 </style>

@@ -158,6 +158,7 @@ const socials = [
 @media (max-width: 560px) {
     .footer-top {
         grid-template-columns: 1fr;
+        padding-bottom: 0;
     }
 }
 

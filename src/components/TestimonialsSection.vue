@@ -181,8 +181,8 @@ function prev() {
 }
 @media (max-width: 1024px) {
     .card-arrows-area {
-        flex-direction: column;
-        gap: 32px;
+        flex-direction: row;
+        gap: 16px;
     }
 }
 /* Navigation arrows */
@@ -279,7 +279,9 @@ height: 100%;
     border-radius: 12px;
     padding: 12px 16px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     z-index: 2;
 }
@@ -293,6 +295,13 @@ height: 100%;
     font-size: 12px;
     color: #6b7280;
 }
+@media (min-width: 1024px) {
+    .portrait-name-box {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+    }
+}
 /* ─── RIGHT: Top Right (Watch) + Bottom Right (Quote) ─── */
 .testimonial-right {
     display: flex;
@@ -304,11 +313,7 @@ height: 100%;
 }
 @media (max-width: 1024px) {
     .testimonial-right {
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        padding-top: 0;
-        gap: 24px;
+        display: none;
     }
 }
 .watch-top-right {

@@ -3,13 +3,36 @@
        ABOUT SECTION
        Layout: Left text column + Right guard photo
        ═══════════════════════════════════════════════════════ -->
-    <section id="about" class="about-section py-20 lg:py-28 bg-white overflow-hidden">
+    <section id="about" class="about-section pt-0 pb-20 lg:pt-28 lg:pb-28 bg-white overflow-hidden">
         <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 <!-- ══════════════════════════════════════════
-             LEFT: Text Content
+             RIGHT: Guard Photo (shows first on mobile)
              ══════════════════════════════════════════ -->
-                <div class="flex flex-col">
+                <div class="flex justify-center lg:justify-end order-1 lg:order-2">
+                    <div class="guard-photo-wrap relative">
+                        <!-- "Since 2016" ribbon banner — top-left -->
+                        <div class="since-ribbon">
+                            <span class="since-line1">Since</span>
+                            <span class="since-year">2016</span>
+                            <!-- Triangle tip of ribbon -->
+                            <div class="ribbon-tip"></div>
+                        </div>
+                        <!-- Guard photo -->
+                        <img src="@/assets/imgs/about_guard.png" alt="Guarrent Security Officer" class="guard-photo"
+                            loading="lazy" @error="guardError = true" />
+                        <!-- CSS fallback if image fails -->
+                        <div v-if="guardError" class="guard-fallback">
+                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- ══════════════════════════════════════════
+             LEFT: Text Content (shows second on mobile)
+             ══════════════════════════════════════════ -->
+                <div class="flex flex-col order-2 lg:order-1">
                     <!-- "WHO WE ARE" pill badge -->
                     <div class="mb-5">
                         <span class="who-badge">WHO WE ARE</span>
@@ -64,29 +87,6 @@
                                 </svg>
                             </div>
                             <span class="feature-label">Sydney Wide</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- ══════════════════════════════════════════
-             RIGHT: Guard Photo
-             ══════════════════════════════════════════ -->
-                <div class="flex justify-center lg:justify-end">
-                    <div class="guard-photo-wrap relative">
-                        <!-- "Since 2016" ribbon banner — top-left -->
-                        <div class="since-ribbon">
-                            <span class="since-line1">Since</span>
-                            <span class="since-year">2016</span>
-                            <!-- Triangle tip of ribbon -->
-                            <div class="ribbon-tip"></div>
-                        </div>
-                        <!-- Guard photo -->
-                        <img src="@/assets/imgs/about_guard.png" alt="Guarrent Security Officer" class="guard-photo"
-                            loading="lazy" @error="guardError = true" />
-                        <!-- CSS fallback if image fails -->
-                        <div v-if="guardError" class="guard-fallback">
-                            <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
-                            </svg>
                         </div>
                     </div>
                 </div>

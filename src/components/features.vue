@@ -31,7 +31,7 @@
                                 d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2zm6-6V11a6 6 0 0 0-5-5.91V4a1 1 0 0 0-2 0v1.09A6 6 0 0 0 6 11v5l-2 2v1h16v-1l-2-2z" />
                         </svg>
                     </div>
-                    <div class="flex flex-col gap-2 mt-auto bg-[#0D2443] p-4 rounded-2xl text-white text-left">
+                    <div class="flex flex-col gap-2 mt-auto lg:mt-auto bg-[#0D2443] p-4 rounded-2xl text-white text-left">
                         <h3 class="feature-card-title">
                             Alarm System<br />Integration
                         </h3>
@@ -204,5 +204,14 @@
 .feature-arrow-btn:hover {
     background: #1a4dcb;
     transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+    .alarm-card {
+        min-height: 280px;
+    }
+    .alarm-card .flex.flex-col.gap-2 {
+        margin-top: 2rem !important;
+    }
 }
 </style>
