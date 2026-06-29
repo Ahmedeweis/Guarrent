@@ -16,7 +16,9 @@
                     <!-- Question -->
                     <button @click="toggle(idx)"
                         class="faq-button w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-blue-50/50 transition-colors duration-200"
-                        :class="[locale === 'ar' ? 'flex-row-reverse text-right' : '', openIdx === idx ? 'active' : '']">
+                        :class="[locale === 'ar' ? 'flex-row-reverse text-right' : '', openIdx === idx ? 'active' : '']"
+                        :aria-expanded="openIdx === idx"
+                        :aria-label="`${openIdx === idx ? 'Close' : 'Open'}: ${t(item.q)}`">
                         <span class="question-text font-semibold text-gray-900 text-base leading-snug">{{ t(item.q) }}</span>
                         <span
                             class="flex-shrink-0 w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-300"
@@ -45,7 +47,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 const { t, locale } = useI18n()
 
@@ -61,18 +63,35 @@ const items = [
 
 function toggle(idx) {
     openIdx.value = openIdx.value === idx ? null : idx
+    // Recalculate height after toggling, safely!
+    nextTick(() => {
+        requestAnimationFrame(() => {
+            if (answerRefs.value[idx]) {
+                answerHeights.value[idx] = answerRefs.value[idx].scrollHeight
+            }
+        })
+    })
 }
 
 function setRef(el, idx) {
     if (el) {
         answerRefs.value[idx] = el
-        answerHeights.value[idx] = el.scrollHeight
+        // Wait for DOM to stabilize!
+        nextTick(() => {
+            requestAnimationFrame(() => {
+                answerHeights.value[idx] = el.scrollHeight
+            })
+        })
     }
 }
 
 onMounted(() => {
-    Object.entries(answerRefs.value).forEach(([idx, el]) => {
-        if (el) answerHeights.value[idx] = el.scrollHeight
+    nextTick(() => {
+        requestAnimationFrame(() => {
+            Object.entries(answerRefs.value).forEach(([idx, el]) => {
+                if (el) answerHeights.value[idx] = el.scrollHeight
+            })
+        })
     })
 })
 </script>

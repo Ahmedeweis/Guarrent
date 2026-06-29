@@ -52,7 +52,7 @@
                     <div class="flex gap-3 mb-5">
                         <div class="evidence-photo">
                             <img src="@/assets/imgs/patrol_report.webp" alt="Patrol photo evidence"
-                                class="w-full h-full object-cover" loading="lazy" />
+                                class="w-full h-full object-cover" loading="lazy" width="300" height="200" />
                         </div>
                         <!-- Second photo: solid blue placeholder matching design -->
                         <div class="evidence-photo evidence-photo-blue"></div>

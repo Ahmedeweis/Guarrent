@@ -1,22 +1,17 @@
 {
-    "name": "Nahg Al-Tanfeez Business Services",
-    "short_name": "Nahg",
-    "description": "Strategic Transformation Partner for Non-Profit Organizations in Saudi Arabia",
+    "name": "Guarrent Security Patrols",
+    "short_name": "Guarrent",
+    "description": "Rapid Response Security Patrols & Real-Time Reporting. 24/7 Mobile Patrols for Homes & Businesses in Sydney.",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#F2F4F5",
-    "theme_color": "#002D2D",
+    "background_color": "#0D2443",
+    "theme_color": "#1C56DB",
     "orientation": "portrait",
     "icons": [
         {
             "src": "/logo.webp",
             "sizes": "192x192 512x512",
             "type": "image/webp"
-        },
-        {
-            "src": "/logo.png",
-            "sizes": "192x192 512x512",
-            "type": "image/png"
         }
     ]
 }

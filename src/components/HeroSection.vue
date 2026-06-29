@@ -19,7 +19,7 @@
                                 class="left-img w-full h-auto object-contain mb-4 absolute -top-16 left-1/2 -translate-x-1/2 max-w-[220px]"
                             />
                             <div class="mt-16 text-center md:text-left">
-                                <p class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Alert</p>
+                                <p class="text-[11px] font-semibold text-gray-600 uppercase tracking-wider mb-1">Alert</p>
                                 <p class="text-sm font-bold text-gray-800 leading-snug">
                                     140+ Sydney Homes<br />
                                     Broken Into Every Night.<br />
@@ -41,8 +41,9 @@
                         <img
                             src="@/assets/imgs/hero_phone.webp"
                             alt="Guarrent Security App"
-                            width="340"
-                            height="600"
+                            width="425"
+                            height="587"
+                            fetchpriority="high"
                             class="phone-img drop-shadow-2xl"
                         />
                     </div>

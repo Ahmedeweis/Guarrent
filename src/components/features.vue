@@ -13,7 +13,7 @@
                     <div class="absolute inset-0 flex items-center justify-center z-0">
                         <div class="shield-img-wrap">
                             <img src="@/assets/imgs/shield_sphere.webp" alt="3D Security Shield" class="shield-img"
-                                loading="lazy" />
+                                loading="lazy" width="549" height="454" />
                         </div>
                     </div>
                     <div class="absolute bottom-6 right-6 z-10">
@@ -65,7 +65,7 @@
                 </div>
                 <div class="absolute inset-0 flex items-end justify-center z-0 pointer-events-none">
                     <img src="@/assets/imgs/hero_phone.webp" alt="Security App on Phone" class="rapid-phone-img"
-                        loading="lazy" />
+                        loading="lazy" width="425" height="587" />
                 </div>
                 <div class="absolute bottom-6 right-6 z-10 max-w-[320px]">
                     <h3 class="rapid-title">Rapid Incident Response</h3>
@@ -118,7 +118,6 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-radius: 50%;
     filter: drop-shadow(0 0 60px rgba(60, 100, 220, 0.5));
 }
 .nsw-badge {

@@ -26,7 +26,7 @@
                 <div class="portrait-card">
                     <!-- Background shield sphere -->
                     <div class="portrait-bg-shield">
-                        <img src="@/assets/imgs/shield_sphere.webp" alt="Shield background" class="portrait-bg-img" loading="lazy" />
+                        <img src="@/assets/imgs/shield_sphere.webp" alt="Shield background" class="portrait-bg-img" loading="lazy" width="549" height="454" />
                     </div>
                     <!-- Top-left photo -->
                     <div class="portrait-photo-wrap">
@@ -232,7 +232,9 @@ function prev() {
     z-index: 1;
 }
 .portrait-bg-img {
-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 /* Top-left photo */
 .portrait-photo-wrap {

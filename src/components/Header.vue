@@ -42,7 +42,10 @@
                     <!-- Hamburger (mobile) -->
                     <button @click="menuOpen = !menuOpen"
                         class="md:hidden w-9 h-9 flex flex-col justify-center items-center gap-[5px] rounded-lg hover:bg-black/5 transition-colors"
-                        style="position: relative; z-index: 99;">
+                        style="position: relative; z-index: 99;"
+                        :aria-label="menuOpen ? 'Close menu' : 'Open menu'"
+                        :aria-expanded="menuOpen">
+
                         <span class="block w-5 h-[2px] bg-gray-700 transition-all duration-300 origin-center"
                             :class="menuOpen ? 'rotate-45 translate-y-[7px]' : ''" />
                         <span class="block w-5 h-[2px] bg-gray-700 transition-all duration-300"

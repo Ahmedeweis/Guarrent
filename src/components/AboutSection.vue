@@ -20,7 +20,7 @@
                         </div>
                         <!-- Guard photo -->
                         <img src="@/assets/imgs/about_guard.webp" alt="Guarrent Security Officer" class="guard-photo"
-                            loading="lazy" @error="guardError = true" />
+                            loading="lazy" width="260" height="350" @error="guardError = true" />
                         <!-- CSS fallback if image fails -->
                         <div v-if="guardError" class="guard-fallback">
                             <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@
                         and intruders away.
                     </p>
                     <!-- Feature icon pills row -->
-                    <div class="flex flex-wrap justify-between gap-6 sm:gap-10">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8">
                         <!-- 1. Licensed & Insured -->
                         <div class="feature-pill">
                             <div class="feature-icon-wrap">

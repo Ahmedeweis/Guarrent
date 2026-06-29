@@ -3,7 +3,7 @@
        WHY CHOOSE US SECTION
        4-card grid: blue icons, white cards, centered heading
        ═══════════════════════════════════════════════════════ -->
-    <section class="why-section py-16 lg:py-24">
+    <section id="impact" class="why-section py-16 lg:py-24">
         <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-10">
             <!-- ── Centered heading ── -->
             <div class="text-center mb-12">
