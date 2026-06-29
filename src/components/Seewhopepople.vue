@@ -232,6 +232,11 @@ const features = [
 .evidence-photo-blue {
     background: #2563eb;
 }
+@media (max-width: 768px) {
+    .evidence-photo-blue {
+        display: none;
+    }
+}
 /* Visit log */
 .visit-log {
     background: #f8fafc;
