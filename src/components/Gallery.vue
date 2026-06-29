@@ -34,9 +34,9 @@
 </template>
 <script setup>
 import { ref, computed } from 'vue'
-import galleryBreakIn from '@/assets/imgs/gallery_break_in.png'
-import galleryOfficer from '@/assets/imgs/gallery_officer.png'
-import gallerySmashed from '@/assets/imgs/gallery_smashed.png'
+import galleryBreakIn from '@/assets/imgs/gallery_break_in.webp'
+import galleryOfficer from '@/assets/imgs/gallery_officer.webp'
+import gallerySmashed from '@/assets/imgs/gallery_smashed.webp'
 const slides = [
     { src: galleryBreakIn, alt: 'Burglar breaking into a home at night' },
     { src: galleryOfficer, alt: 'Police officer comforting crime victim' },

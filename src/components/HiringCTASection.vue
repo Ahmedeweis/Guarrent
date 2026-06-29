@@ -7,7 +7,7 @@
             <div class="hiring-cta-grid">
                 <!-- Left: Image -->
                 <div class="hiring-cta-image-wrap">
-                    <img src="@/assets/imgs/about_guard.png" alt="Security Guard" class="hiring-cta-image" loading="lazy" />
+                    <img src="@/assets/imgs/about_guard.webp" alt="Security Guard" class="hiring-cta-image" loading="lazy" />
                 </div>
                 <!-- Right: Content -->
                 <div class="hiring-cta-content">

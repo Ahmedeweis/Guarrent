@@ -12,7 +12,7 @@
                     </div>
                     <div class="absolute inset-0 flex items-center justify-center z-0">
                         <div class="shield-img-wrap">
-                            <img src="@/assets/imgs/shield_sphere.png" alt="3D Security Shield" class="shield-img"
+                            <img src="@/assets/imgs/shield_sphere.webp" alt="3D Security Shield" class="shield-img"
                                 loading="lazy" />
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="absolute inset-0 flex items-end justify-center z-0 pointer-events-none">
-                    <img src="@/assets/imgs/hero_phone.png" alt="Security App on Phone" class="rapid-phone-img"
+                    <img src="@/assets/imgs/hero_phone.webp" alt="Security App on Phone" class="rapid-phone-img"
                         loading="lazy" />
                 </div>
                 <div class="absolute bottom-6 right-6 z-10 max-w-[320px]">

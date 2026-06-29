@@ -9,7 +9,7 @@
             <div class="fact-outer">
                 <!-- ── Floating circle with 3D building (sits above dark card) ── -->
                 <div class="fact-illustration">
-                    <img src="@/assets/imgs/fact_building.png" alt="Secured building illustration"
+                    <img src="@/assets/imgs/fact_building.webp" alt="Secured building illustration"
                         class="fact-building-img" loading="lazy" />
                 </div>
                 <!-- ── Dark navy card (has cutout shape at top) ── -->

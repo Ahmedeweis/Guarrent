@@ -61,12 +61,10 @@ onUnmounted(() => {
 }
 
 .scroll-btn {
-    background-color: #E9EEFA;
-    color: #2E221E;
-}
-.scroll-btn:hover {
     background-color: #1C56DB;
     color: white;
-    border-color: #1C56DB;
+}
+.scroll-btn:hover {
+    background-color: #1548c0;
 }
 </style>

@@ -26,7 +26,7 @@
                 <div class="portrait-card">
                     <!-- Background shield sphere -->
                     <div class="portrait-bg-shield">
-                        <img src="@/assets/imgs/shield_sphere.png" alt="Shield background" class="portrait-bg-img" loading="lazy" />
+                        <img src="@/assets/imgs/shield_sphere.webp" alt="Shield background" class="portrait-bg-img" loading="lazy" />
                     </div>
                     <!-- Top-left photo -->
                     <div class="portrait-photo-wrap">
@@ -81,7 +81,7 @@
 </template>
 <script setup>
 import { ref, computed } from 'vue'
-import testimonialMary from '@/assets/imgs/testimonial_mary.png'
+import testimonialMary from '@/assets/imgs/testimonial_mary.webp'
 const testimonials = [
     {
         photo: testimonialMary,

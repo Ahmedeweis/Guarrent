@@ -19,7 +19,7 @@
                             <div class="ribbon-tip"></div>
                         </div>
                         <!-- Guard photo -->
-                        <img src="@/assets/imgs/about_guard.png" alt="Guarrent Security Officer" class="guard-photo"
+                        <img src="@/assets/imgs/about_guard.webp" alt="Guarrent Security Officer" class="guard-photo"
                             loading="lazy" @error="guardError = true" />
                         <!-- CSS fallback if image fails -->
                         <div v-if="guardError" class="guard-fallback">

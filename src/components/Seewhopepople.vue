@@ -51,7 +51,7 @@
                     <p class="report-section-label">Photo Evidence</p>
                     <div class="flex gap-3 mb-5">
                         <div class="evidence-photo">
-                            <img src="@/assets/imgs/patrol_report.png" alt="Patrol photo evidence"
+                            <img src="@/assets/imgs/patrol_report.webp" alt="Patrol photo evidence"
                                 class="w-full h-full object-cover" loading="lazy" />
                         </div>
                         <!-- Second photo: solid blue placeholder matching design -->
