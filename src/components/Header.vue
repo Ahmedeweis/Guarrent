@@ -6,7 +6,6 @@
         : 'bg-transparent'">
         <div class="max-w-[1200px] mx-auto px-6 lg:px-10">
             <div class="flex items-center justify-between h-[68px]">
-
                 <!-- ── Logo ── -->
                 <RouterLink to="/" class="flex items-center gap-2.5 flex-shrink-0 group">
                     <!-- Circle icon -->
@@ -22,7 +21,6 @@
                         GUARRENT
                     </span>
                 </RouterLink>
-
                 <!-- ── Desktop Nav ── -->
                 <nav class="hidden md:flex items-center gap-1">
                     <a v-for="link in navLinks" :key="link.href" :href="link.href"
@@ -30,19 +28,17 @@
                         {{ link.label }}
                     </a>
                 </nav>
-
                 <!-- ── Right: Contact CTA + Hamburger ── -->
                 <div class="flex items-center gap-3">
                     <!-- Contact button (desktop) -->
-                    <a href="#contact"
-                        class="hidden md:inline-flex items-center gap-2 bg-[#1C56DB] text-white text-[13.5px] font-semibold px-5 py-2.5 rounded-full hover:bg-[#1547C0] active:scale-95 transition-all duration-200 shadow-md">
+                    <a href="#contact" style="background-color: #1C80F0;"
+                        class="hidden md:inline-flex items-center gap-2 bg-[#1C80F0] text-white text-[13.5px] font-semibold px-5 py-2.5 rounded-full hover:bg-[#1547C0] active:scale-95 transition-all duration-200 shadow-md">
                         Contact
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                 d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                     </a>
-
                     <!-- Hamburger (mobile) -->
                     <button @click="menuOpen = !menuOpen"
                         class="md:hidden w-9 h-9 flex flex-col justify-center items-center gap-[5px] rounded-lg hover:bg-black/5 transition-colors">
@@ -56,7 +52,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Mobile drawer -->
         <Transition name="drop">
             <div v-if="menuOpen" class="md:hidden bg-white border-t border-gray-100 shadow-lg">
@@ -77,13 +72,10 @@
         </Transition>
     </header>
 </template>
-
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-
 const scrolled = ref(false)
 const menuOpen = ref(false)
-
 const navLinks = [
     { label: 'Home', href: '/#' },
     { label: 'About Us', href: '/#about' },
@@ -91,18 +83,15 @@ const navLinks = [
     { label: 'Pricing', href: '/#pricing' },
     { label: 'FAQ', href: '/#faq' },
 ]
-
 function onScroll() { scrolled.value = window.scrollY > 20 }
 onMounted(() => { window.addEventListener('scroll', onScroll, { passive: true }); onScroll() })
 onUnmounted(() => window.removeEventListener('scroll', onScroll))
 </script>
-
 <style scoped>
 .drop-enter-active,
 .drop-leave-active {
     transition: all .2s ease;
 }
-
 .drop-enter-from,
 .drop-leave-to {
     opacity: 0;
