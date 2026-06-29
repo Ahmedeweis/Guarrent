@@ -253,6 +253,7 @@ const socials = [
     align-items: center;
     justify-content: space-between;
     padding: 24px 0 28px;
+    margin-top: 15px;
     flex-wrap: wrap;
     gap: 16px;
 }

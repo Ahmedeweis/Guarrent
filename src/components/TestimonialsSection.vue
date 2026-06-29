@@ -157,8 +157,8 @@ function prev() {
 }
 .impact-badge {
     display: inline-block;
-    border: 1.5px solid #9ca3af;
-    color: #6b7280;
+    border: 1.5px solid #6b7280;
+    color: #374151;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -365,7 +365,7 @@ height: 100%;
 }
 .testimonial-quote {
     font-size: 15px;
-    color: #869abb;
+    color: #4b5a7a;
     line-height: 1.75;
     font-style: italic;
     max-width: 360px;

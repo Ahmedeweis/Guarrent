@@ -1,3 +1,4 @@
+# robots.txt for Guarrent Security
 User-agent: *
 Allow: /
-Sitemap: https://nahg.com.sa/sitemap.xml
+Disallow: 

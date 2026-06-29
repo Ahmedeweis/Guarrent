@@ -3,6 +3,9 @@
         <div class="hero-bg-text select-none pointer-events-none" aria-hidden="true">
             GUARRENT
         </div>
+        <div class="sr-only">
+            <h1>Guarrent: Rapid Response Security Patrols in Sydney</h1>
+        </div>
         <div class="relative z-10 flex-1 flex items-center py-6 md:py-0">
             <div class="w-full max-w-[1200px] mx-auto px-6 lg:px-10">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-8 items-end md:min-h-[calc(100vh-68px-80px)]">
@@ -11,6 +14,8 @@
                             <img
                                 src="@/assets/imgs/fact_building.webp"
                                 alt="Building"
+                                width="220"
+                                height="280"
                                 class="left-img w-full h-auto object-contain mb-4 absolute -top-16 left-1/2 -translate-x-1/2 max-w-[220px]"
                             />
                             <div class="mt-16 text-center md:text-left">
@@ -27,6 +32,8 @@
                         <img
                             src="@/assets/imgs/gared.webp"
                             alt="Guarrent Security Guard"
+                            width="260"
+                            height="350"
                             class="right-img drop-shadow-xl max-w-[260px] md:max-w-[280px] w-full h-auto object-contain"
                         />
                     </div>
@@ -34,6 +41,8 @@
                         <img
                             src="@/assets/imgs/hero_phone.webp"
                             alt="Guarrent Security App"
+                            width="340"
+                            height="600"
                             class="phone-img drop-shadow-2xl"
                         />
                     </div>

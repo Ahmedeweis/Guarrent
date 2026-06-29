@@ -2,7 +2,7 @@
     <section id="contact" class="contact-section py-16 lg:py-24">
         <div class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-10">
             <div class="contact-grid">
-                <div class="contact-left">
+                <div class="contact-left" style="order: 1;">
                     <h2 class="contact-heading">Request A Nightly Patrol</h2>
                     <p class="contact-subheading">
                         fill out the form and our team will get back to you within
@@ -69,7 +69,7 @@
                 <!-- ═══════════════════════════════════════════
              RIGHT: Contact form
              ═══════════════════════════════════════════ -->
-                <div class="contact-form-panel">
+                <div class="contact-form-panel" style="order: 0;">
                     <form @submit.prevent="submitForm" class="contact-form" novalidate>
                         <!-- Name -->
                         <div class="field-group">
@@ -151,6 +151,14 @@ function submitForm() {
 @media (max-width: 900px) {
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+}
+@media (min-width: 901px) {
+    .contact-left {
+        order: 0 !important;
+    }
+    .contact-form-panel {
+        order: 1 !important;
     }
 }
 /* ─── LEFT COLUMN ─── */
