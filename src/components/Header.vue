@@ -1,6 +1,6 @@
 <template>
     <!-- Header sits ON the hero gradient, so bg is transparent by default,
-       becomes white/blurred on scroll -->
+         becomes white/blurred on scroll -->
     <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" :class="scrolled
         ? 'bg-white/95 backdrop-blur-md shadow-sm'
         : 'bg-transparent'">
@@ -32,7 +32,7 @@
                 <div class="flex items-center gap-3">
                     <!-- Contact button (desktop) -->
                     <a href="#contact" style="background-color: #1C80F0;"
-                        class="hidden md:inline-flex items-center gap-2 bg-[#1C80F0] text-white text-[13.5px] font-semibold px-5 py-2.5 rounded-full hover:bg-[#1547C0] active:scale-95 transition-all duration-200 shadow-md">
+                        class="hidden md:inline-flex items-center gap-2 text-white text-[13.5px] font-semibold px-5 py-2.5 rounded-full hover:bg-[#1547C0] active:scale-95 transition-all duration-200 shadow-md">
                         Contact
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
@@ -41,7 +41,8 @@
                     </a>
                     <!-- Hamburger (mobile) -->
                     <button @click="menuOpen = !menuOpen"
-                        class="md:hidden w-9 h-9 flex flex-col justify-center items-center gap-[5px] rounded-lg hover:bg-black/5 transition-colors">
+                        class="md:hidden w-9 h-9 flex flex-col justify-center items-center gap-[5px] rounded-lg hover:bg-black/5 transition-colors"
+                        style="position: relative; z-index: 99;">
                         <span class="block w-5 h-[2px] bg-gray-700 transition-all duration-300 origin-center"
                             :class="menuOpen ? 'rotate-45 translate-y-[7px]' : ''" />
                         <span class="block w-5 h-[2px] bg-gray-700 transition-all duration-300"
@@ -54,15 +55,18 @@
         </div>
         <!-- Mobile drawer -->
         <Transition name="drop">
-            <div v-if="menuOpen" class="md:hidden bg-white border-t border-gray-100 shadow-lg">
-                <div class="max-w-[1200px] mx-auto px-6 py-4 flex flex-col gap-1">
+            <div v-if="menuOpen" class="md:hidden"
+                 style="position: absolute; top: 68px; left: 0; width: 100%; background-color: #ffffff; border-top: 1px solid #f3f4f6; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); z-index: 98;">
+                <div class="px-6 py-4 flex flex-col gap-1">
                     <a v-for="link in navLinks" :key="`m-${link.href}`" :href="link.href" @click="menuOpen = false"
-                        class="px-4 py-3 text-sm font-medium text-gray-700 rounded-xl hover:bg-gray-50">
+                        class="px-4 py-3 text-sm font-medium text-gray-700 rounded-xl hover:bg-gray-50 block">
                         {{ link.label }}
                     </a>
+                    <!-- Contact Button (Mobile Inline Style) -->
                     <a href="#contact" @click="menuOpen = false"
-                        class="mt-2 flex items-center justify-center gap-2 bg-[#1C56DB] text-white text-sm font-semibold py-3 rounded-xl">
-                        Contact <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                       style="display: flex; align-items: center; justify-content: center; gap: 8px; background-color: #1C80F0; color: #ffffff; font-size: 14px; font-weight: 600; padding-top: 12px; padding-bottom: 12px; border-radius: 12px; margin-top: 8px; width: 100%; text-decoration: none;">
+                        Contact
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                 d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -83,8 +87,13 @@ const navLinks = [
     { label: 'Pricing', href: '/#pricing' },
     { label: 'FAQ', href: '/#faq' },
 ]
-function onScroll() { scrolled.value = window.scrollY > 20 }
-onMounted(() => { window.addEventListener('scroll', onScroll, { passive: true }); onScroll() })
+function onScroll() {
+    scrolled.value = window.scrollY > 20
+}
+onMounted(() => {
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll()
+})
 onUnmounted(() => window.removeEventListener('scroll', onScroll))
 </script>
 <style scoped>

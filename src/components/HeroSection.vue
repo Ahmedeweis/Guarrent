@@ -7,25 +7,27 @@
     <section class="hero-section relative min-h-screen flex flex-col overflow-hidden pt-[68px]">
         <!-- ═══════════════════════════════════════════
          BACKGROUND: giant typographic watermark
-    ════════════════════════════════════════════ -->
+     ════════════════════════════════════════════ -->
         <div class="hero-bg-text select-none pointer-events-none" aria-hidden="true">
             GUARRENT
         </div>
         <!-- ═══════════════════════════════════════════
          MAIN CONTENT ROW
-    ════════════════════════════════════════════ -->
-        <div class="relative z-10 flex-1 flex items-center">
+     ════════════════════════════════════════════ -->
+        <div class="relative z-10 flex-1 flex items-center py-10 md:py-0">
             <div class="w-full max-w-[1200px] mx-auto px-6 lg:px-10">
-                <div class="grid grid-cols-3 gap-4 lg:gap-8 items-end min-h-[calc(100vh-68px-80px)]">
+                <!-- تحويل الجريد لعمود واحد في الموبايل وثلاثة أعمدة من أول الـ md -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-4 lg:gap-8 items-end md:min-h-[calc(100vh-68px-80px)]">
                     <!-- ── COL 1: Left image + card ── -->
-                    <div class="col-span-1 flex flex-col justify-center pb-16">
-                        <div class="house-card bg-white p-5 shadow-xl max-w-[240px] relative pt-20" style="border-top-right-radius: 80px; border-radius: 0 80px 0px 0px;">
+                    <!-- order-2: تظهر ثانية واحدة على الموبايل وأول واحدة على الديسكتوب -->
+                    <div class="col-span-1 flex flex-col justify-center pb-6 md:pb-16 order-2 md:order-1 items-center md:items-start">
+                        <div class="house-card bg-white p-5 shadow-xl max-w-[240px] relative pt-20 mx-auto md:mx-0" style="border-top-right-radius: 80px; border-radius: 0 80px 0px 0px;">
                             <img
                                 src="@/assets/imgs/fact_building.png"
                                 alt="Building"
                                 class="left-img w-full h-auto object-contain mb-4 absolute -top-16 left-1/2 -translate-x-1/2 max-w-[220px]"
                             />
-                            <div class="mt-16">
+                            <div class="mt-16 text-center md:text-left">
                                 <p class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-1">Alert</p>
                                 <p class="text-sm font-bold text-gray-800 leading-snug">
                                     140+ Sydney Homes<br />
@@ -35,20 +37,22 @@
                             </div>
                         </div>
                     </div>
+                    <!-- ── COL 3: Right image (صورة الظابط) ── -->
+                    <!-- order-1: ترفع الصورة لتكون أول شيء يقع عليه العين في الموبايل وفي المنتصف -->
+                    <div class="col-span-1 flex justify-center items-end pb-4 order-1 md:order-3">
+                        <img
+                            src="@/assets/imgs/gared.png"
+                            alt="Guarrent Security Guard"
+                            class="right-img drop-shadow-xl max-w-[240px] md:max-w-[280px] w-full h-auto object-contain"
+                        />
+                    </div>
                     <!-- ── COL 2: Center — phone ── -->
-                    <div class="col-span-1 flex flex-col items-center justify-end relative">
+                    <!-- order-3: تظهر أسفل العناصر في الموبايل وفي المنتصف برضه -->
+                    <div class="col-span-1 flex flex-col items-center justify-end relative order-3 md:order-2 pt-6 md:pt-0">
                         <img
                             src="@/assets/imgs/hero_phone.png"
                             alt="Guarrent Security App"
                             class="phone-img drop-shadow-2xl"
-                        />
-                    </div>
-                    <!-- ── COL 3: Right image ── -->
-                    <div class="col-span-1 flex justify-center items-end pb-4">
-                        <img
-                            src="@/assets/imgs/gared.png"
-                            alt="Guarrent Security Guard"
-                            class="right-img drop-shadow-xl max-w-[280px] w-full h-auto object-contain"
                         />
                     </div>
                 </div>
@@ -56,10 +60,10 @@
         </div>
         <!-- ═══════════════════════════════════════════
          BOTTOM: CTA + Wave
-    ════════════════════════════════════════════ -->
-        <div class="relative z-10 flex justify-center pb-10">
+     ════════════════════════════════════════════ -->
+        <div class="relative z-10 flex justify-center pb-10 px-6">
             <a href="#contact" style="background-color: white;"
-                class="inline-flex items-center gap-3 bg-white text-gray-900 font-semibold text-[15px] px-7 py-3.5 rounded-full">
+                class="inline-flex items-center gap-3 bg-white text-gray-900 font-semibold text-[15px] px-7 py-3.5 rounded-full shadow-lg active:scale-95 transition-transform duration-150 w-full sm:w-auto justify-center">
                 Pre-Subscribe Now
                 <span class="inline-flex items-center justify-center w-8 h-8 bg-gray-900 text-white rounded-full">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -95,10 +99,10 @@
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: clamp(80px, 16vw, 220px);
+    font-size: clamp(60px, 16vw, 220px); /* تقليل الحجم الأدنى ليناسب الشاشات الصغيرة جداً */
     font-weight: 900;
     letter-spacing: -0.02em;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.65);
     white-space: nowrap;
     z-index: 1;
     line-height: 1;
@@ -109,14 +113,15 @@
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
 }
 .phone-img {
-    width: clamp(180px, 26vw, 340px);
+    width: clamp(160px, 45vw, 340px); /* جعل الهاتف مرن بحسب عرض الشاشة */
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 30px 60px rgba(28, 86, 219, 0.25));
 }
 .right-img {
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
-    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    /* حماية الماسك من الاختفاء الكامل على الموبايل */
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 </style>
